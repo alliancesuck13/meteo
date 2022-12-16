@@ -7,13 +7,14 @@ let calculateButton = document.querySelector('.page__button--calculate')
 let buttonGsk = document.querySelector('.page__button--gsk')
 let buttonWgs = document.querySelector('.page__button--wgs')
 
-let result = document.querySelector('.subheader--result')
+let textResult = document.querySelector('.subheader--result')
 
 let body = document.querySelector('body')
 
 const GSK2011 =
   '+proj=longlat +ellps=GSK2011 +towgs84=0.013,-0.092,-0.03,-0.001738,0.003559,-0.004263,0.0074 +no_defs'
 
+// same ^
 proj4.defs(
   'WGS84',
   '+title=WGS 84 (long/lat) +proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees'
@@ -88,9 +89,9 @@ calculateButton.onclick = () => {
         userInputGskX.value = cordResult[0]
         userInputGskY.value = cordResult[1]
 
-        result.textContent = cordResult.join('\n')
+        textResult.textContent = cordResult.join('\n')
       } else {
-        result.textContent = 'Введите X и Y'
+        textResult.textContent = 'Введите X и Y'
 
         userInputGskX.value = ''
         userInputGskY.value = ''
@@ -109,9 +110,9 @@ calculateButton.onclick = () => {
         userInputWgsX.value = cordResult[0]
         userInputWgsY.value = cordResult[1]
 
-        result.textContent = cordResult.join('\n')
+        textResult.textContent = cordResult.join('\n')
       } else {
-        result.textContent = 'Введите X и Y'
+        textResult.textContent = 'Введите X и Y'
 
         userInputWgsX.value = ''
         userInputWgsY.value = ''
