@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/assets/styles.css">
+    <title>Землемер-Метео</title>
+  </head>
+  <body>
+    <main class="page">
+      <h1 class="page__title header">Землемер-Метео</h1>
+      <div class="page__wrapper">
+        <h2 class="page__description subheader">
+          Пересчет из WGS84 в ГСК-2011
+        </h2>
+        <div class="page__data page__data--wgs">
+          <h3 class="page__data__header">WGS84</h3>
+          <label class="page__label" for="input-x">
+            Введите координату X (долгота)
+          </label>
+          <input
+            class="page__input page__input--wgs--x"
+            type="text"
+            name="input-x"
+            id="input-x"
+            placeholder="X"
+          >
+          <label class="page__label" for="input-y">
+            Введите координату Y (широта)
+          </label>
+          <input
+            class="page__input page__input--wgs--y"
+            type="text"
+            name="input-y"
+            id="input-y"
+            placeholder="Y"
+          >
+        </div>
+
+        <div class="page__data page__data--gsk">
+          <h3 class="page__data__header">ГСК-2011</h3>
+          <label class="page__label" for="input-x">
+            Координата X (долгота)
+          </label>
+          <input
+            class="page__input page__input--gsk--x"
+            type="text"
+            name="input-x"
+            readonly
+            placeholder="X"
+          >
+          <label class="page__label" for="input-y">Координата Y (широта)</label>
+          <input
+            class="page__input page__input--gsk--y"
+            type="text"
+            name="input-y"
+            readonly
+            placeholder="Y"
+          >
+        </div>
+        <div class="page__button__wrapper">
+          <button class="page__button page__button--system page__button--gsk">
+            GSK
+          </button>
+          <button class="page__button page__button--system page__button--wgs">
+            WGS
+          </button>
+        </div>
+        <div class="page__result">
+          <p class="subheader subheader--result">Результат</p>
+        </div>
+        <button class="page__button page__button--calculate">Рассчитать</button>
+      </div>
+    </main>
+    <footer class="about">
+      <p class="about__telegram">
+        Telegram: <a class="about__link" href="https://t.me/fe2ck">fe2ck</a>
+      </p>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.js"></script>
+  </body>
+</html>
