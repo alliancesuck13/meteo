@@ -1,3 +1,5 @@
+import { moveToNextInput } from './move-to-next-input.js'
+
 let userInputWgsX = document.querySelector('.page__input--wgs--x')
 let userInputWgsY = document.querySelector('.page__input--wgs--y')
 let userInputGskX = document.querySelector('.page__input--gsk--x')
@@ -44,7 +46,7 @@ buttonGsk.onclick = () => {
 
   userInputWgsX.readOnly = true
   userInputWgsY.readOnly = true
-  
+
   userInputWgsX.style.borderBottomColor = 'red'
   userInputWgsY.style.borderBottomColor = 'red'
 
@@ -133,3 +135,7 @@ calculateButton.onclick = () => {
     location.reload()
   }
 }
+
+moveToNextInput()
+
+export { userInputWgsX, userInputWgsY, userInputGskX, userInputGskY }

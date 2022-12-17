@@ -10,7 +10,7 @@
 body {
   color: #9a9f9f;
 
-  background: linear-gradient(-45deg, #480323, #270539, #062b39, #043e1a);
+  background: linear-gradient(-45deg, #1d0505, #000720, #001c20, #2b0015);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -65,10 +65,15 @@ a {
   background-color: rgba(0, 0, 0, 0.188);
 }
 
+.page__data__header {
+  color: #00bd7e;
+}
+
 /* mobile */
 @media (max-width: 1200px) {
   .page__title {
-    font-size: 75px;
+    font-size: 70px;
+    line-height: 60px;
   }
 
   .page__wrapper {
@@ -185,7 +190,7 @@ a {
   }
 }
 
-/* pc and other */
+/* desktop+ */
 @media (min-width: 1200px) {
   .page__wrapper {
     margin-top: 40px;
@@ -292,5 +297,10 @@ a {
     font-size: 40px;
 
     margin-right: 10px;
+  }
+
+  .page__button--calculate {
+    width: 30%;
+    font-size: 35px;
   }
 }
